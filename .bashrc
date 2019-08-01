@@ -91,11 +91,11 @@ fi
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
+alias tn='tmux new -s'
+alias ta='tmux attach-session -t'
 
 #Compute canada aliases
-alias graham="ssh -R 2222:localhost:22 graham.computecanada.ca;sshfs delmasv@graham.computecanada.ca:/scratch/delmasv/ ~/graham/ -o IdentityFile=/home/delmasv/.ssh/id_rsa"
-alias cedar="ssh -R 2222:localhost:22 cedar.computecanada.ca;sshfs delmasv@cedar.computecanada.ca:/scratch/delmasv/ ~/cedar/ -o IdentityFile=/home/delmasv/.ssh/id_rsa"
-alias beluga="ssh -R 2222:localhost:22 beluga.computecanada.ca;sshfs delmasv@beluga.computecanada.ca:/scratch/delmasv/ ~/beluga/ -o IdentityFile=/home/delmasv/.ssh/id_rsa"
+alias graham="if mount | grep ~/graham > /dev/null; then echo \"Already mounted ~/graham skiping mouting phase\"; else sshfs delmasv@graham.computecanada.ca:/scratch/delmasv/ ~/graham/ -o IdentityFile=/home/delmasv/.ssh/id_rsa;fi;ssh -R 2222:localhost:22 graham.computecanada.ca"
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
