@@ -58,7 +58,7 @@ fi
 
 case "`hostname | cut -c-3`" in
 "gra")
-  export COLOR="\[\033[33m\]"
+  export COLOR="\[\033[01;33m\]"
   ;;
 "del")
   export COLOR="\[\033[01;32m\]"
