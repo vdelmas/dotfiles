@@ -56,9 +56,18 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
-if [ "`hostname | cut -c-3`" = "gra" ]; then
+case "`hostname | cut -c-3`" in
+"gra")
   export COLOR="\[\033[33m\]"
-fi
+  ;;
+"del")
+  export COLOR="\[\033[01;32m\]"
+  ;;
+*)
+  export COLOR=""
+  ;;
+esac
+
 if [ "$color_prompt" = yes ]; then
     #PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\W\[\033[00m\]\$ '
     PS1="${debian_chroot:+($debian_chroot)}${COLOR}\u@\h\[\033[00m\]:\[\033[01;34m\]\W\[\033[00m\]\$ "
@@ -76,6 +85,13 @@ xterm*|rxvt*)
     ;;
 esac
 
+case "$TERM" in
+tmux*)
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\W\[\033[00m\]\$ '
+    ;;
+*)
+    ;;
+esac
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
