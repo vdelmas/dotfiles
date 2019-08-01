@@ -1,5 +1,5 @@
 # .bash_profile
-export TERM="tmux"
+export TERM="tmux-256color"
 
 # Get the aliases and functions
 if [ -f ~/.bashrc ]; then
