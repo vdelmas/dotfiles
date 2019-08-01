@@ -93,9 +93,9 @@ alias la='ls -A'
 alias l='ls -CF'
 
 #Compute canada aliases
-alias graham="ssh -R 2222:localhost:22 graham.computecanada.ca"
-alias cedar="ssh -R 2222:localhost:22 cedar.computecanada.ca"
-alias beluga="ssh -R 2222:localhost:22 beluga.computecanada.ca"
+alias graham="ssh -R 2222:localhost:22 graham.computecanada.ca;sshfs delmasv@graham.computecanada.ca:/scratch/delmasv/ ~/graham/ -o IdentityFile=/home/delmasv/.ssh/id_rsa"
+alias cedar="ssh -R 2222:localhost:22 cedar.computecanada.ca;sshfs delmasv@cedar.computecanada.ca:/scratch/delmasv/ ~/cedar/ -o IdentityFile=/home/delmasv/.ssh/id_rsa"
+alias beluga="ssh -R 2222:localhost:22 beluga.computecanada.ca;sshfs delmasv@beluga.computecanada.ca:/scratch/delmasv/ ~/beluga/ -o IdentityFile=/home/delmasv/.ssh/id_rsa"
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
