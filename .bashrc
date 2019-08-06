@@ -57,6 +57,9 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 case "`hostname | cut -c-3`" in
+"vin") #imac
+  export COLOR="\[\033[01;36m\]"
+  ;;
 "gra")
   export COLOR="\[\033[01;33m\]"
   ;;
