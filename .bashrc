@@ -63,12 +63,12 @@ fi
 #Color according to hostname
 if [ "`hostname | cut -c-3`" == "gra" ]; then
   export COLOR="\[\033[01;33m\]"
+elif [ "`hostname | cut -c-6`" == "beluga" ]; then
+  export COLOR="\[\033[01;35m\]"
 elif [ "`hostname`" == "delmasv-pc" ]; then
   export COLOR="\[\033[01;32m\]"
 elif [ "`hostname`" == "delmasv-nas" ]; then
   export COLOR="\[\033[01;36m\]"
-elif [ "`hostname`" == "mac" ]; then
-  export COLOR="\[\033[01;35m\]"
 else
   export COLOR=""
 fi
