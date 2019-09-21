@@ -29,7 +29,6 @@ function para(){
 }
 
 #Compute canada aliases
-alias graham="if mount | grep ~/graham > /dev/null; then echo \"Already mounted ~/graham skiping mouting phase\"; else sshfs delmasv@graham.computecanada.ca:/scratch/delmasv/ ~/graham/ -o IdentityFile=/home/delmasv/.ssh/id_rsa;fi;ssh -R 2222:localhost:22 graham.computecanada.ca"
-alias beluga="if mount | grep ~/beluga > /dev/null; then echo \"Already mounted ~/beluga skiping mouting phase\"; else sshfs delmasv@beluga.computecanada.ca:/scratch/delmasv/ ~/beluga/ -o IdentityFile=/home/delmasv/.ssh/id_rsa;fi;ssh -R 2222:localhost:22 beluga.computecanada.ca"
-alias cedar="if mount | grep ~/cedar > /dev/null; then echo \"Already mounted ~/cedar skiping mouting phase\"; else sshfs delmasv@cedar.computecanada.ca:/scratch/delmasv/ ~/cedar/ -o IdentityFile=/home/delmasv/.ssh/id_rsa;fi;ssh -R 2222:localhost:22 cedar.computecanada.ca"
-
+alias graham="if mount | grep ~/graham > /dev/null; then echo \"Already mounted ~/graham skiping mouting phase\"; else sshfs delmasv@graham.computecanada.ca:/scratch/delmasv/ ~/graham/ -o IdentityFile=~/.ssh/id_rsa;fi;ssh -R 2222:localhost:22 graham.computecanada.ca"
+alias beluga="if mount | grep ~/beluga > /dev/null; then echo \"Already mounted ~/beluga skiping mouting phase\"; else sshfs delmasv@beluga.computecanada.ca:/scratch/delmasv/ ~/beluga/ -o IdentityFile=~/.ssh/id_rsa;fi;ssh -R 2222:localhost:22 beluga.computecanada.ca"
+alias cedar="if mount | grep ~/cedar > /dev/null; then echo \"Already mounted ~/cedar skiping mouting phase\"; else sshfs delmasv@cedar.computecanada.ca:/scratch/delmasv/ ~/cedar/ -o IdentityFile=~/.ssh/id_rsa;fi;ssh -R 2222:localhost:22 cedar.computecanada.ca"
