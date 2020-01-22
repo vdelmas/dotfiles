@@ -1,4 +1,4 @@
-set runtimepath^=~/.vim/ajt-fortran.vim
+set runtimepath^=~/.vim/pack/my_plugins/start/ajt-fortran.vim
 
 set background=dark
 set t_Co=256
@@ -32,4 +32,3 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
-syntax on
