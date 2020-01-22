@@ -12,6 +12,7 @@ alias tn='tmux new -s'
 alias ta='tmux attach-session -t'
 alias tls='tmux ls'
 alias tk='tmux kill-session -t'
+alias td='tmux detach'
 
 #umount when mounted with sshfs
 alias fumount='fusermount -u'
