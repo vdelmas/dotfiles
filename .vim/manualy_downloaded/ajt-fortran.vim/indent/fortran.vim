@@ -91,6 +91,7 @@ function FortranGetIndent(lnum)
   let prev2stat=substitute(prev2line, '!.*$', '', '')
 
   "Indent do loops only if they are all guaranteed to be of do/end do type
+  let b:fortran_do_enddo=1
   if exists("b:fortran_do_enddo") || exists("g:fortran_do_enddo")
     if prevstat =~? '^\s*\(\d\+\s\)\=\s*\(\a\w*\s*:\)\=\s*do\>'
       let ind = ind + shiftwidth()
@@ -119,7 +120,7 @@ function FortranGetIndent(lnum)
 
   "Indent program units unless instructed otherwise
   if !exists("b:fortran_indent_less") && !exists("g:fortran_indent_less")
-    let prefix='\(\(pure\|impure\|elemental\|recursive|attributes(global)\|attributes(device)\)\s\+\)\{,2}'
+    let prefix='\(\(pure\|impure\|elemental\|recursive\|attributes(global)\|attributes(device)\)\s\+\)\{,2}'
     let type='\(\(integer\|real\|double\s\+precision\|complex\|logical'
           \.'\|character\|type\|class\)\s*\S*\s\+\)\='
     if prevstat =~? '^\s*\(contains\|submodule\|program\)\>'
