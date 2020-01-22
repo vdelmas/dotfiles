@@ -1,10 +1,34 @@
 #!/bin/bash
 
+FILES=".bashrc
+.bash_profiles
+.bash_aliases
+.vimrc
+.tmux.conf"
+
+DIRECTORIES=".vim
+.tmux"
+
 DOT_PATH=`pwd`
-ln -sf $DOT_PATH/.bashrc ~/.bashrc
-ln -sf $DOT_PATH/.bash_profile ~/.bash_profile
-ln -sf $DOT_PATH/.bash_aliases ~/.bash_aliases
-ln -sf $DOT_PATH/.vimrc ~/.vimrc
-ln -sf $DOT_PATH/.tmux.conf ~/.tmux.conf
-ln -sf $DOT_PATH/.vim ~/.vim
-ln -sf $DOT_PATH/.tmux ~/.tmux
+if [ ! -d "$DOT_PATH/old_dotfiles" ]
+then
+  mkdir $DOT_PATH/old_dotfiles
+fi
+
+for file in $FILES;do
+  if [ -f $file ]
+  then
+    cp ~/$file $DOT_PATH/old_dotfiles
+    rm -f ~/$file
+    ln -sf $DOT_PATH/$file ~/$file
+  fi
+done
+
+for dir in $DIRECTORIES;do
+  if [ -f $dir ]
+  then
+    cp ~/$dir $DOT_PATH/old_dotfiles
+    rm -rf ~/$dir
+    ln -sf $DOT_PATH/$dir ~/$dir
+  fi
+done
