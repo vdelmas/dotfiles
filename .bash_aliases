@@ -19,7 +19,7 @@ alias fumount='fusermount -u'
 
 #squeue aliases to monitor jobs
 alias sqm='squeue -u ${USER} --format="%.9i  %.8j  %.4C %.4D %.7m  %.3t %.21S %.21e %.12L"'
-alias wsqm='watch -n 60 squeue -u ${USER} --format=\"%.9i  %.8j  %.4C %.4D %.7m  %.3t %.21S %.21e %.12L\"'
+alias wsqm='watch -n 300 squeue -u ${USER} --format=\"%.9i  %.8j  %.4C %.4D %.7m  %.3t %.21S %.21e %.12L\"'
 
 #As aliases but with parameters
 function para(){
