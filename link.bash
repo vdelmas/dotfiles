@@ -16,19 +16,21 @@ then
 fi
 
 for file in $FILES;do
-  if [ -f $file ]
+  if [ -f ~/$file ]
   then
+    echo "$file already existed, was saved in ~/dotfiles/old_dotfiles"
     cp ~/$file $DOT_PATH/old_dotfiles
     rm -f ~/$file
-    ln -sf $DOT_PATH/$file ~/$file
   fi
+  ln -sf $DOT_PATH/$file ~/$file
 done
 
 for dir in $DIRECTORIES;do
-  if [ -f $dir ]
+  if [ -d ~/$dir ]
   then
-    cp ~/$dir $DOT_PATH/old_dotfiles
+    echo "$dir already existed, was saved in ~/dotfiles/old_dotfiles"
+    cp -r ~/$dir $DOT_PATH/old_dotfiles
     rm -rf ~/$dir
-    ln -sf $DOT_PATH/$dir ~/$dir
   fi
+  ln -sf $DOT_PATH/$dir ~/$dir
 done
