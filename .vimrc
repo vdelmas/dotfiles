@@ -19,6 +19,9 @@ syntax on
 filetype on
 filetype plugin indent on
 
+"Spell check
+set spell spelllang=en_us
+
 au BufNewFile,BufRead *.cuf set filetype=fortran
 
 set showcmd
@@ -50,5 +53,7 @@ call plug#begin('~/.vim/plugged')
 Plug '~/.vim/manualy_downloaded/ajt-fortran.vim'
 Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
+Plug 'https://github.com/rhysd/vim-grammarous.git'
+Plug 'https://github.com/rhysd/vim-grammarous.git'
 
 call plug#end()
