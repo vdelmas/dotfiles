@@ -21,7 +21,7 @@ filetype plugin indent on
 
 au BufNewFile,BufRead *.cuf set filetype=fortran
 
-set showcmd
+"set showcmd
 set number
 set showmatch
 set hlsearch
@@ -50,5 +50,6 @@ call plug#begin('~/.vim/plugged')
 Plug '~/.vim/manualy_downloaded/ajt-fortran.vim'
 Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
+Plug 'https://github.com/tpope/vim-commentary.git'
 
 call plug#end()
