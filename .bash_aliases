@@ -18,8 +18,8 @@ alias td='tmux detach'
 alias fumount='fusermount -u'
 
 #squeue aliases to monitor jobs
-alias sqm='squeue -u ${USER} --format="%.15i %.17j %.2C %.4D %.3t %.21S %.21e %.12L"'
-alias wsqm='watch -n 300 squeue -u ${USER} --format=\"%.15i %.17j %.2C %.4D %.3t %.21S %.21e %.12L\"'
+alias sqm='squeue -u ${USER} --format="%.16i %.17j %.2C %.4D %.3t %.21S %.21e %.9L"'
+alias wsqm='watch -n 300 squeue -u ${USER} --format=\"%.16i %.17j %.2C %.4D %.3t %.21S %.21e %.9L\"'
 
 #As aliases but with parameters
 function para(){
