@@ -20,7 +20,7 @@ filetype on
 filetype plugin indent on
 
 "Spell check
-set spell spelllang=en_us
+" set spell spelllang=en_us
 
 au BufNewFile,BufRead *.cuf set filetype=fortran
 

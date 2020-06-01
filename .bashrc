@@ -70,7 +70,7 @@ elif [ "`hostname | cut -c-6`" == "helios" ]; then
 elif [ "`hostname | cut -c-5`" == "cedar" ]; then
   export COLOR="\[\033[01;31m\]"
 elif [ "`hostname`" == "delmasv-pc" ]; then
-  export PATH=$PATH:/home/delmasv/Documents/ParaView-5.5.2-Qt5-MPI-Linux-64bit/bin
+  export PATH=$PATH:/home/delmasv/Documents/ParaView-5.5.2-Qt5-MPI-Linux-64bit/bin:/opt/pgi/linux86-64/2019/bin/
   export COLOR="\[\033[01;32m\]"
 elif [ "`hostname`" == "delmasv-nas" ]; then
   export COLOR="\[\033[01;36m\]"
