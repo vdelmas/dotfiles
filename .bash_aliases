@@ -30,7 +30,7 @@ function para(){
 }
 
 #Compute canada aliases
-alias graham="ssh -R 2222:localhost:22 graham.computecanada.ca"
-alias helios="ssh -R 2222:localhost:22 helios.calculquebec.ca"
-alias beluga="ssh -R 2222:localhost:22 beluga.computecanada.ca"
-alias cedar="ssh -R 2222:localhost:22 cedar.computecanada.ca"
+alias graham="ssh graham.computecanada.ca"
+alias helios="ssh helios.calculquebec.ca"
+alias beluga="ssh beluga.computecanada.ca"
+alias cedar="ssh cedar.computecanada.ca"
