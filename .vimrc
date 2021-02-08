@@ -42,6 +42,10 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
+"Remaping of pageup pagedown
+nnoremap <C-j> <C-d>
+nnoremap <C-k> <C-u>
+
 "No more auto comment under commented line
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 

@@ -45,10 +45,6 @@ esac
 # should be on the output of commands, not on the prompt
 #force_color_prompt=yes
 
-if [ "`hostname`" == "delmasv-nas" ]; then
-  force_color_prompt=yes
-fi
-
 if [ -n "$force_color_prompt" ]; then
     if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
 	# We have color support; assume it's compliant with Ecma-48
@@ -60,27 +56,9 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
-#Color according to hostname
-if [ "`hostname | cut -c-3`" == "gra" ]; then
-  export COLOR="\[\033[01;33m\]"
-elif [ "`hostname | cut -c-6`" == "beluga" ]; then
-  export COLOR="\[\033[01;35m\]"
-elif [ "`hostname | cut -c-6`" == "helios" ]; then
-  export COLOR="\[\033[01;46m\]"
-elif [ "`hostname | cut -c-5`" == "cedar" ]; then
-  export COLOR="\[\033[01;31m\]"
-elif [ "`hostname`" == "delmasv-pc" ]; then
-  export PATH=$PATH:/home/delmasv/Documents/ParaView-5.5.2-Qt5-MPI-Linux-64bit/bin:/opt/pgi/linux86-64/2019/bin/
-  export COLOR="\[\033[01;32m\]"
-elif [ "`hostname`" == "delmasv-nas" ]; then
-  export COLOR="\[\033[01;36m\]"
-else
-  export COLOR=""
-fi
-
 if [ "$color_prompt" = yes ]; then
-    #PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\W\[\033[00m\]\$ '
-    PS1="${debian_chroot:+($debian_chroot)}${COLOR}\u@\h\[\033[00m\]:\[\033[01;34m\]\W\[\033[00m\]\$ "
+  CUSTOM="1;32"
+  PS1="${debian_chroot:+($debian_chroot)}\e[${CUSTOM}m\u@\h\[\033[00m\]:\[\033[01;34m\]\W\[\033[00m\]\$ "
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
@@ -132,3 +110,4 @@ fi
 
 #vim bindings
 set -o vi
+

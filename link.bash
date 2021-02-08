@@ -1,7 +1,7 @@
 #!/bin/bash
 
 FILES=".bashrc
-.bash_profiles
+.bash_profile
 .bash_aliases
 .vimrc
 .tmux.conf"
