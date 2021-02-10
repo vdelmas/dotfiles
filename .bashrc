@@ -58,7 +58,7 @@ fi
 
 if [ "$color_prompt" = yes ]; then
   CUSTOM="1;32"
-  PS1="${debian_chroot:+($debian_chroot)}\e[${CUSTOM}m\u@\h\[\033[00m\]:\[\033[01;34m\]\W\[\033[00m\]\$ "
+  PS1="${debian_chroot:+($debian_chroot)}\[\e[${CUSTOM}m\]\u@\h\[\e[m\]\[\033[00m\]:\[\033[01;34m\]\W\[\033[00m\]\$ "
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
