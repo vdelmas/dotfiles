@@ -14,13 +14,15 @@ let g:PaperColor_Theme_Options = {
   \ }
 
 let filetype_cuf = "fortran"
+let g:airline_theme='simple'
+let g:airline_powerline_fonts=1
 
 syntax on
 filetype on
 filetype plugin indent on
 
 "Spell check
-" set spell spelllang=en_us
+"set spell spelllang=en_us
 
 au BufNewFile,BufRead *.cuf set filetype=fortran
 
@@ -35,6 +37,7 @@ set autoindent
 set shiftwidth=2
 set expandtab
 set tabstop=2
+set relativenumber
 
 "Remaping of pane movement
 nnoremap <C-J> <C-W><C-J>
@@ -50,14 +53,14 @@ nnoremap <C-k> <C-u>
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 call plug#begin('~/.vim/plugged')
-" Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
-" Plug 'junegunn/vim-easy-align'
+"Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
+"Plug 'junegunn/vim-easy-align'
 
-" Unmanaged plugin (manually installed and updated)
+"Unmanaged plugin (manually installed and updated)
 Plug '~/.vim/manualy_downloaded/ajt-fortran.vim'
 Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'https://github.com/tpope/vim-commentary.git'
-Plug 'https://github.com/rhysd/vim-grammarous.git'
 
 call plug#end()
