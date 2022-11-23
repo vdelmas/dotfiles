@@ -14,7 +14,7 @@ let g:PaperColor_Theme_Options = {
   \ }
 
 let filetype_cuf = "fortran"
-let g:airline_theme='simple'
+let g:airline_theme='bubblegum'
 let g:airline_powerline_fonts=1
 
 syntax on
